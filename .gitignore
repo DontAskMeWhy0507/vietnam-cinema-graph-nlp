@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Agent & Skill metadata
+.superpowers/
+docs/
+
+# Large cache and raw scraped data
+vietnam_cinema_articles_cache.json
+edges.csv
+nodes.csv
+wikipedia_5k.csv
+
+# Legacy & Unrelated files
+crawl_wiki.py
+crawl_ai_graph.py
+analyze_graph.py
+advanced_sna.py
+generate_pdf_report.py
+graph.py
+wiki_client.py
+test_graph.py
+test_wiki_client.py
+SNA_Report_AI_Graph.pdf
+SNA_REPORT.md
+scratch_query.py
