@@ -1,0 +1,3101 @@
+{
+  "metadata": {
+    "total_graph_edges": 21383,
+    "total_cached_articles": 2253,
+    "sample_size": 300,
+    "random_seed": 99999,
+    "evaluation_criterion": "Overall Precision >= 90.0%"
+  },
+  "summary": {
+    "total_tested": 300,
+    "total_correct": 300,
+    "overall_precision_pct": 100.0,
+    "passed_threshold": true
+  },
+  "group_breakdown": {
+    "Infobox": {
+      "tested": 175,
+      "correct": 175,
+      "precision_pct": 100.0
+    },
+    "Infobox/Text": {
+      "tested": 10,
+      "correct": 10,
+      "precision_pct": 100.0
+    },
+    "Inferred": {
+      "tested": 89,
+      "correct": 89,
+      "precision_pct": 100.0
+    },
+    "OpenIE Text": {
+      "tested": 26,
+      "correct": 26,
+      "precision_pct": 100.0
+    }
+  },
+  "relation_breakdown": {
+    "ACTED_IN": {
+      "group": "Infobox",
+      "tested": 65,
+      "correct": 65,
+      "precision_pct": 100.0
+    },
+    "DIRECTED": {
+      "group": "Infobox",
+      "tested": 35,
+      "correct": 35,
+      "precision_pct": 100.0
+    },
+    "PRODUCED": {
+      "group": "Infobox",
+      "tested": 25,
+      "correct": 25,
+      "precision_pct": 100.0
+    },
+    "PRODUCED_BY": {
+      "group": "Infobox",
+      "tested": 25,
+      "correct": 25,
+      "precision_pct": 100.0
+    },
+    "MARRIED_TO": {
+      "group": "Infobox",
+      "tested": 25,
+      "correct": 25,
+      "precision_pct": 100.0
+    },
+    "AFFILIATED_WITH": {
+      "group": "Infobox/Text",
+      "tested": 10,
+      "correct": 10,
+      "precision_pct": 100.0
+    },
+    "CO_STARRED": {
+      "group": "Inferred",
+      "tested": 55,
+      "correct": 55,
+      "precision_pct": 100.0
+    },
+    "DIRECTED_ACTOR": {
+      "group": "Inferred",
+      "tested": 34,
+      "correct": 34,
+      "precision_pct": 100.0
+    },
+    "MENTORED": {
+      "group": "OpenIE Text",
+      "tested": 11,
+      "correct": 11,
+      "precision_pct": 100.0
+    },
+    "FOUNDED": {
+      "group": "OpenIE Text",
+      "tested": 15,
+      "correct": 15,
+      "precision_pct": 100.0
+    }
+  },
+  "records": [
+    {
+      "index": 1,
+      "source": "Nguyễn Quốc Trường Thịnh",
+      "target": "Bí mật nghiệt ngã",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Bí mật nghiệt ngã",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 2,
+      "source": "Lan Hương (diễn viên sinh 1961)",
+      "target": "Lửa ấm",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Lửa ấm",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 3,
+      "source": "Tuấn Quang",
+      "target": "Hà Nội mùa đông năm 46",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Hà Nội mùa đông năm 46",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 4,
+      "source": "Trọng Hải",
+      "target": "Cầu thang tối",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Cầu thang tối",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 5,
+      "source": "Vũ Ngọc Ánh (diễn viên)",
+      "target": "Nghiệp sinh tử",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Nghiệp sinh tử",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 6,
+      "source": "Bình Minh (người mẫu)",
+      "target": "Những đứa con biệt động Sài Gòn",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Những đứa con biệt động Sài Gòn",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 7,
+      "source": "Madeleine Stowe",
+      "target": "Chúng tôi từng là lính",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Chúng tôi từng là lính",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 8,
+      "source": "Tự Huy",
+      "target": "Không nơi ẩn nấp",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Không nơi ẩn nấp",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 9,
+      "source": "Mỹ Duyên",
+      "target": "Vị đắng tình yêu",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Vị đắng tình yêu",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 10,
+      "source": "Quốc Tuấn (diễn viên)",
+      "target": "Hà Nội mùa đông năm 46",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Hà Nội mùa đông năm 46",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 11,
+      "source": "Trung Dân",
+      "target": "Báu vật trời cho",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Báu vật trời cho",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 12,
+      "source": "Huy Công",
+      "target": "Biển gọi",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Biển gọi",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 13,
+      "source": "Lương Thế Thành",
+      "target": "Mệnh lệnh hoa hồng",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Mệnh lệnh hoa hồng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 14,
+      "source": "Nhan Phúc Vinh",
+      "target": "Duyên (phim truyền hình)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Duyên (phim truyền hình)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 15,
+      "source": "Lam Trường",
+      "target": "Nữ tướng cướp",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Nữ tướng cướp",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 16,
+      "source": "Hữu Nghĩa",
+      "target": "Khi đàn ông có bầu",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Khi đàn ông có bầu",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 17,
+      "source": "Tăng Thanh Hà",
+      "target": "Bỗng dưng muốn khóc",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Bỗng dưng muốn khóc",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 18,
+      "source": "Thanh Hoàng",
+      "target": "Kiều nữ và đại gia",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Kiều nữ và đại gia",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 19,
+      "source": "Thanh Hiền (diễn viên, sinh 1954)",
+      "target": "Trà táo đỏ",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Trà táo đỏ",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 20,
+      "source": "Thanh Nam",
+      "target": "Quỷ nhập tràng (phim)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Quỷ nhập tràng (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 21,
+      "source": "Mạnh Trường",
+      "target": "Hoa nở trái mùa",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Hoa nở trái mùa",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 22,
+      "source": "Phạm Cường",
+      "target": "Lằn ranh",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Lằn ranh",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 23,
+      "source": "Ngọc Lan (diễn viên)",
+      "target": "Cuộc gọi lúc 0 giờ",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Cuộc gọi lúc 0 giờ",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 24,
+      "source": "Hoàng Hà (nhạc sĩ)",
+      "target": "Quê nhà",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Quê nhà",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 25,
+      "source": "Cường Seven",
+      "target": "Bước nhảy xì tin",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Bước nhảy xì tin",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 26,
+      "source": "Hồ Quang Minh",
+      "target": "Thời xa vắng (phim)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Thời xa vắng (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 27,
+      "source": "Yeye Nhật Hạ",
+      "target": "Gia đình phép thuật",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Gia đình phép thuật",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 28,
+      "source": "Ngọc Thư",
+      "target": "Cảnh sát hình sự (loạt phim)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Cảnh sát hình sự (loạt phim)",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 29,
+      "source": "Quang Tuấn",
+      "target": "Trái đắng",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Trái đắng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 30,
+      "source": "Hương Giang (sinh 1970)",
+      "target": "Người đẹp Tây Đô",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Người đẹp Tây Đô",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 31,
+      "source": "Vĩnh Xương (diễn viên)",
+      "target": "Có anh, nơi ấy bình yên",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Có anh, nơi ấy bình yên",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 32,
+      "source": "Lan Hương (diễn viên sinh 1961)",
+      "target": "Mùa ổi",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Mùa ổi",
+      "verified": true,
+      "reason": "Minh chứng văn bản trích xuất trực tiếp từ Infobox bài viết"
+    },
+    {
+      "index": 33,
+      "source": "Thanh Thức",
+      "target": "Mùa sậy trổ bông",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Mùa sậy trổ bông",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 34,
+      "source": "Quốc Trị",
+      "target": "11 tháng 5 ngày",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm 11 tháng 5 ngày",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 35,
+      "source": "Albert Tsai",
+      "target": "Everest: Người tuyết bé nhỏ",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Everest: Người tuyết bé nhỏ",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 36,
+      "source": "Hoàng Thùy Linh",
+      "target": "Ngày ấy mình đã yêu",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Ngày ấy mình đã yêu",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 37,
+      "source": "Thu Quỳnh",
+      "target": "Sống cùng lịch sử (phim)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Sống cùng lịch sử (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 38,
+      "source": "Nguyễn Chánh Tín",
+      "target": "Khi đàn ông có bầu",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Khi đàn ông có bầu",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 39,
+      "source": "Lý Thanh Thảo",
+      "target": "Vòng xoáy tình yêu",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Vòng xoáy tình yêu",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 40,
+      "source": "Bảo Liêm",
+      "target": "Vật đổi sao dời",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Vật đổi sao dời",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 41,
+      "source": "Bùi Bài Bình",
+      "target": "Nhà có ba chị em",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Nhà có ba chị em",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 42,
+      "source": "Lâm Vỹ Dạ",
+      "target": "Nhà có 5 nàng tiên",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Nhà có 5 nàng tiên",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 43,
+      "source": "Việt Anh (nghệ sĩ)",
+      "target": "Phim ngắn cuối tuần (series phim truyền hình)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Phim ngắn cuối tuần (series phim truyền hình)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 44,
+      "source": "Lê Hạ Anh",
+      "target": "Mùa sậy trổ bông",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Mùa sậy trổ bông",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 45,
+      "source": "Ngọc Quỳnh (diễn viên)",
+      "target": "Chuyện phố phường",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Chuyện phố phường",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 46,
+      "source": "Đức Khuê",
+      "target": "Bánh đúc có xương",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Bánh đúc có xương",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 47,
+      "source": "Thành Trí",
+      "target": "Người đẹp Tây Đô",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Người đẹp Tây Đô",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 48,
+      "source": "Trung Hiếu (diễn viên)",
+      "target": "Đào, phở và piano",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Đào, phở và piano",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 49,
+      "source": "Huy Khánh",
+      "target": "Chuyện tình xa xứ",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Chuyện tình xa xứ",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 50,
+      "source": "Nguyễn Quốc Trường Thịnh",
+      "target": "Mẹ trùm",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Mẹ trùm",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 51,
+      "source": "Khánh Huyền",
+      "target": "Anh chỉ có mình em",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Anh chỉ có mình em",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 52,
+      "source": "Trần Kim Hải",
+      "target": "Tài (phim)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Tài (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 53,
+      "source": "Đình Hiếu",
+      "target": "Cuộc gọi lúc 0 giờ",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Cuộc gọi lúc 0 giờ",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 54,
+      "source": "Kasim Hoàng Vũ",
+      "target": "Chết lúc nửa đêm",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Chết lúc nửa đêm",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 55,
+      "source": "Lan Hương (diễn viên, sinh 1961)",
+      "target": "Tình yêu không hẹn trước",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Tình yêu không hẹn trước",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 56,
+      "source": "Khả Như",
+      "target": "Gieo gió",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Gieo gió",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 57,
+      "source": "Samuel An",
+      "target": "Thiên thần hộ mệnh",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Thiên thần hộ mệnh",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 58,
+      "source": "Kim Vui",
+      "target": "Người đẹp Bình Dương (phim)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Người đẹp Bình Dương (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 59,
+      "source": "Thái Hòa (diễn viên)",
+      "target": "Để Mai tính 2",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Để Mai tính 2",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 60,
+      "source": "Ma Ran Đô",
+      "target": "Bí mật hai thế giới",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Bí mật hai thế giới",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 61,
+      "source": "Kathleen Lương",
+      "target": "Oan hồn (phim)",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Oan hồn (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 62,
+      "source": "Lê Vân (nghệ sĩ)",
+      "target": "Bao giờ cho đến tháng Mười",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Bao giờ cho đến tháng Mười",
+      "verified": true,
+      "reason": "Bài viết diễn viên ghi nhận tác phẩm trong danh sách phim tham gia"
+    },
+    {
+      "index": 63,
+      "source": "Lương Thế Thành",
+      "target": "Dâu bể đường trần",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Dâu bể đường trần",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 64,
+      "source": "Thanh Tú (diễn viên)",
+      "target": "Truyện cổ tích cho tuổi mười bảy",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong tác phẩm Truyện cổ tích cho tuổi mười bảy",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 65,
+      "source": "Hứa Vĩ Văn",
+      "target": "Giao lộ định mệnh",
+      "rel_type": "ACTED_IN",
+      "group": "Infobox",
+      "evidence": "Diễn viên trong Giao lộ định mệnh",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận diễn viên trong dàn cast/liên kết"
+    },
+    {
+      "index": 66,
+      "source": "Phan Gia Nhật Linh",
+      "target": "Em và Trịnh",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Em và Trịnh",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 67,
+      "source": "Bùi Tiến Huy",
+      "target": "Mẹ ơi, bố đâu rồi?",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Mẹ ơi, bố đâu rồi?",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 68,
+      "source": "Aaron Toronto",
+      "target": "Đêm tối rực rỡ!",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Đêm tối rực rỡ!",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 69,
+      "source": "Bùi Quốc Việt",
+      "target": "Chủ tịch tỉnh (phim truyền hình)",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Chủ tịch tỉnh (phim truyền hình)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 70,
+      "source": "Vũ Hồng Sơn",
+      "target": "Chạy án",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Chạy án",
+      "verified": true,
+      "reason": "Bài viết đạo diễn ghi nhận tác phẩm chỉ đạo"
+    },
+    {
+      "index": 71,
+      "source": "Phạm Nhuệ Giang",
+      "target": "Lập trình cho trái tim",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Lập trình cho trái tim",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 72,
+      "source": "Greta Gerwig",
+      "target": "Barbie (phim)",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Barbie (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 73,
+      "source": "Bùi Quốc Việt",
+      "target": "Lửa trắng",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Lửa trắng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 74,
+      "source": "Nguyễn Hữu Phần",
+      "target": "Làng ma 10 năm sau",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Làng ma 10 năm sau",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 75,
+      "source": "Hoàng Thi Thơ",
+      "target": "Người cô đơn",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Người cô đơn",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 76,
+      "source": "Trần Lực",
+      "target": "Tết này ai đến xông nhà",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Tết này ai đến xông nhà",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 77,
+      "source": "Lê Mạnh Thích",
+      "target": "Trở lại Ngư Thủy",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Trở lại Ngư Thủy",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 78,
+      "source": "Đinh Tuấn Vũ",
+      "target": "Cuộc đời của Yến",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Cuộc đời của Yến",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 79,
+      "source": "Lê Hoàng Hoa",
+      "target": "Ván bài lật ngửa: Vòng hoa trước mộ",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Ván bài lật ngửa: Vòng hoa trước mộ",
+      "verified": true,
+      "reason": "Minh chứng văn bản Infobox xác nhận đạo diễn tác phẩm"
+    },
+    {
+      "index": 80,
+      "source": "Vũ Đình Thân",
+      "target": "Mùi cỏ cháy",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Mùi cỏ cháy",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 81,
+      "source": "Nguyễn Phương Điền",
+      "target": "Bay vào cõi mộng",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Bay vào cõi mộng",
+      "verified": true,
+      "reason": "Bài viết đạo diễn ghi nhận tác phẩm chỉ đạo"
+    },
+    {
+      "index": 82,
+      "source": "Bùi Tiến Huy",
+      "target": "Hoa sữa về trong gió",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Hoa sữa về trong gió",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 83,
+      "source": "Nguyễn Phan Quang Bình",
+      "target": "Vũ khúc con cò",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Vũ khúc con cò",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 84,
+      "source": "Phạm Nhuệ Giang",
+      "target": "Thương nhớ đồng quê",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Thương nhớ đồng quê",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 85,
+      "source": "Nguyễn Dương",
+      "target": "Cổng mặt trời",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Cổng mặt trời",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 86,
+      "source": "Victor Vũ",
+      "target": "Trại hoa đỏ",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Trại hoa đỏ",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 87,
+      "source": "Phi Tiến Sơn",
+      "target": "Ngọt ngào và man trá",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Ngọt ngào và man trá",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 88,
+      "source": "Nguyễn Quang",
+      "target": "Trò đùa của Thiên Lôi",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Trò đùa của Thiên Lôi",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 89,
+      "source": "Nguyễn Danh Dũng",
+      "target": "Hương vị tình thân",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Hương vị tình thân",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 90,
+      "source": "Trần Ngọc Giàu",
+      "target": "Tía tui là cao thủ",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Tía tui là cao thủ",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 91,
+      "source": "Đào Bá Sơn",
+      "target": "Biệt ly trắng",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Biệt ly trắng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 92,
+      "source": "Bùi Quốc Việt",
+      "target": "Giọt nước rơi",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Giọt nước rơi",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 93,
+      "source": "Lê Thiện Viễn",
+      "target": "Hẹn em ngày nhật thực",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Hẹn em ngày nhật thực",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 94,
+      "source": "Trần Vũ (đạo diễn)",
+      "target": "Những mảnh đời rừng",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Những mảnh đời rừng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 95,
+      "source": "Vũ Trường Khoa",
+      "target": "Bước nhảy xì tin",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Bước nhảy xì tin",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 96,
+      "source": "Vũ Trường Khoa",
+      "target": "Tình xa",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Tình xa",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 97,
+      "source": "Charlie Nguyễn",
+      "target": "Cưới ngay kẻo lỡ",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Cưới ngay kẻo lỡ",
+      "verified": true,
+      "reason": "Bài viết đạo diễn ghi nhận tác phẩm chỉ đạo"
+    },
+    {
+      "index": 98,
+      "source": "Bùi Tiến Huy",
+      "target": "Đồng hồ đếm ngược",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Đồng hồ đếm ngược",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 99,
+      "source": "Nguyễn Quang Dũng (đạo diễn)",
+      "target": "Tháng năm rực rỡ",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Tháng năm rực rỡ",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 100,
+      "source": "Trần Hữu Tấn",
+      "target": "Tết ở làng địa ngục",
+      "rel_type": "DIRECTED",
+      "group": "Infobox",
+      "evidence": "Đạo diễn phim Tết ở làng địa ngục",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận đạo diễn"
+    },
+    {
+      "index": 101,
+      "source": "Dmitry Voronkov (II)",
+      "target": "Người lính (phim)",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Người lính (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 102,
+      "source": "Hồng Tú",
+      "target": "Nghỉ hè sợ nghỉ hưu",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Nghỉ hè sợ nghỉ hưu",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 103,
+      "source": "Alex Gartner",
+      "target": "Thợ săn cổ vật",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Thợ săn cổ vật",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 104,
+      "source": "Võ Thanh Hòa",
+      "target": "Quỷ cẩu",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Quỷ cẩu",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 105,
+      "source": "Trần Thị Bích Ngọc",
+      "target": "Cu li không bao giờ khóc",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Cu li không bao giờ khóc",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 106,
+      "source": "Trần Thị Bích Ngọc",
+      "target": "Cô dâu đại chiến 2",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Cô dâu đại chiến 2",
+      "verified": true,
+      "reason": "Bài viết nhà sản xuất xác nhận tác phẩm"
+    },
+    {
+      "index": 107,
+      "source": "Gilbert de Goldschmitt",
+      "target": "Hòa Bình (phim)",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Hòa Bình (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 108,
+      "source": "Nguyễn Thị Hồng Ngát",
+      "target": "Truyền thuyết về Quán Tiên",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Truyền thuyết về Quán Tiên",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 109,
+      "source": "Charlie Nguyễn",
+      "target": "Em chưa 18",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Em chưa 18",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 110,
+      "source": "Đinh Ngọc Diệp",
+      "target": "Thám tử Kiên: Kỳ án không đầu",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Thám tử Kiên: Kỳ án không đầu",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 111,
+      "source": "Dustin Nguyễn",
+      "target": "Để Mai tính",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Để Mai tính",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 112,
+      "source": "Charlie Nguyễn",
+      "target": "Đại tiệc trăng máu 8",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Đại tiệc trăng máu 8",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 113,
+      "source": "Ngô Thanh Vân",
+      "target": "Song lang (phim)",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Song lang (phim)",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 114,
+      "source": "Claire-Agnes Lajoumard",
+      "target": "Chơi vơi",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Chơi vơi",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 115,
+      "source": "Dustin Nguyễn",
+      "target": "Long Ruồi",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Long Ruồi",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 116,
+      "source": "Ma Dong-seok",
+      "target": "Ngoài vòng pháp luật 2",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Ngoài vòng pháp luật 2",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 117,
+      "source": "Phạm Việt Anh Khoa",
+      "target": "Cô dâu đại chiến",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Cô dâu đại chiến",
+      "verified": true,
+      "reason": "Bài viết nhà sản xuất xác nhận tác phẩm"
+    },
+    {
+      "index": 118,
+      "source": "Hữu Mai",
+      "target": "Ông cố vấn",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Ông cố vấn",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 119,
+      "source": "Bảo Nhân",
+      "target": "Gái già lắm chiêu 3",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Gái già lắm chiêu 3",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 120,
+      "source": "Đặng Tất Bình",
+      "target": "Chuyện của Pao",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Chuyện của Pao",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 121,
+      "source": "Trinh Hoan",
+      "target": "Ròm",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Ròm",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 122,
+      "source": "Phước Sang",
+      "target": "Hello cô Ba",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Hello cô Ba",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 123,
+      "source": "Võ Đắc Lưỡng",
+      "target": "Mùa gió chướng",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Mùa gió chướng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 124,
+      "source": "Johnny Trí Nguyễn",
+      "target": "Bẫy rồng",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Bẫy rồng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 125,
+      "source": "Mai Thế Hiệp",
+      "target": "Đoạt hồn",
+      "rel_type": "PRODUCED",
+      "group": "Infobox",
+      "evidence": "Nhà sản xuất phim Đoạt hồn",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận nhà sản xuất"
+    },
+    {
+      "index": 126,
+      "source": "Tiệc trăng máu",
+      "target": "HKFilm",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi HKFilm",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 127,
+      "source": "Hạ sĩ quan (phim)",
+      "target": "Hãng phim Giải Phóng",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Hãng phim Giải Phóng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 128,
+      "source": "Thợ săn cổ vật",
+      "target": "PlayStation Productions",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi PlayStation Productions",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 129,
+      "source": "Bố già (phim 2021)",
+      "target": "Trấn Thành Town",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Trấn Thành Town",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 130,
+      "source": "Nhà bà Nữ",
+      "target": "CJ HK Entertainment",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi CJ HK Entertainment",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 131,
+      "source": "Mùa ổi",
+      "target": "Bộ Văn hóa, Thể thao và Du lịch (Việt Nam)",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Bộ Văn hóa, Thể thao và Du lịch (Việt Nam)",
+      "verified": true,
+      "reason": "Minh chứng Infobox hãng sản xuất hợp lệ"
+    },
+    {
+      "index": 132,
+      "source": "Hoàng hậu cuối cùng (phim)",
+      "target": "Galaxy Studio",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Galaxy Studio",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 133,
+      "source": "Tít và Mít",
+      "target": "Đài Truyền hình Việt Nam",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Đài Truyền hình Việt Nam",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 134,
+      "source": "Mẹ vắng nhà (phim 1979)",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Hãng phim truyện Việt Nam",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 135,
+      "source": "Cánh đồng hoang",
+      "target": "Hãng phim Giải Phóng",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Hãng phim Giải Phóng",
+      "verified": true,
+      "reason": "Minh chứng Infobox hãng sản xuất hợp lệ"
+    },
+    {
+      "index": 136,
+      "source": "Rừng đen (phim)",
+      "target": "Galaxy Studio",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Galaxy Studio",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 137,
+      "source": "Chúng tôi từng là lính",
+      "target": "Icon Productions",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Icon Productions",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 138,
+      "source": "Ván bài lật ngửa",
+      "target": "Hãng phim Giải Phóng",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Hãng phim Giải Phóng",
+      "verified": true,
+      "reason": "Minh chứng Infobox hãng sản xuất hợp lệ"
+    },
+    {
+      "index": 139,
+      "source": "Quê nhà",
+      "target": "Xí nghiệp Phim truyện Việt Nam",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Xí nghiệp Phim truyện Việt Nam",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 140,
+      "source": "Con đường có Mặt Trời",
+      "target": "Điện ảnh Quân đội Nhân dân Việt Nam",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Điện ảnh Quân đội Nhân dân Việt Nam",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 141,
+      "source": "Không còn gì để nói",
+      "target": "Đài Truyền hình Việt Nam",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Đài Truyền hình Việt Nam",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 142,
+      "source": "Đất lành",
+      "target": "Điện ảnh Quân đội nhân dân",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Điện ảnh Quân đội nhân dân",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 143,
+      "source": "Bộ tứ báo thủ",
+      "target": "Trấn Thành Town",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Trấn Thành Town",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 144,
+      "source": "Thạch Thảo (phim)",
+      "target": "Galaxy EE",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Galaxy EE",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 145,
+      "source": "Ba người đàn ông",
+      "target": "Hãng phim Giải Phóng",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Hãng phim Giải Phóng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 146,
+      "source": "Chị chị em em 2",
+      "target": "Đoàn Di Băng",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Đoàn Di Băng",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 147,
+      "source": "Mang mẹ đi bỏ",
+      "target": "CJ HK Entertainment",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi CJ HK Entertainment",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 148,
+      "source": "Barbie (phim)",
+      "target": "LuckyChap Entertainment",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi LuckyChap Entertainment",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 149,
+      "source": "Cô gái trên sông",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Hãng phim truyện Việt Nam",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 150,
+      "source": "Running Man Việt Nam: Con rối tự do",
+      "target": "Seoul Broadcasting System",
+      "rel_type": "PRODUCED_BY",
+      "group": "Infobox",
+      "evidence": "Sản xuất bởi Seoul Broadcasting System",
+      "verified": true,
+      "reason": "Bài viết tác phẩm xác nhận hãng sản xuất/đơn vị phát hành"
+    },
+    {
+      "index": 151,
+      "source": "Thành Được",
+      "target": "Út Bạch Lan",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Út Bạch Lan",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 152,
+      "source": "Thảo Vân",
+      "target": "Công Lý (diễn viên)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Công Lý (diễn viên)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ đích xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 153,
+      "source": "Tạ Bôn",
+      "target": "Nguyễn Kim Dung",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Nguyễn Kim Dung",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 154,
+      "source": "Nguyễn Xuân Oánh",
+      "target": "Thẩm Thúy Hằng",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Thẩm Thúy Hằng",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ đích xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 155,
+      "source": "Đỗ Kỷ",
+      "target": "Lan Hương (diễn viên sinh 1961)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Lan Hương (diễn viên sinh 1961)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 156,
+      "source": "Kim Giác",
+      "target": "Hoàng Giang (nghệ sĩ)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Hoàng Giang (nghệ sĩ)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 157,
+      "source": "Lan Hương (diễn viên, sinh 1963)",
+      "target": "Đặng Tất Bình",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Đặng Tất Bình",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 158,
+      "source": "Quách Ngọc Ngoan",
+      "target": "Lê Phương",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Lê Phương",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 159,
+      "source": "Jennifer Phạm",
+      "target": "Quang Dũng (ca sĩ)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Quang Dũng (ca sĩ)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 160,
+      "source": "Hoàng Giang (nghệ sĩ)",
+      "target": "Kim Giác",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Kim Giác",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 161,
+      "source": "Hoàng Giang (nghệ sĩ)",
+      "target": "Kim Giác (nghệ sĩ)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Kim Giác (nghệ sĩ)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 162,
+      "source": "Phượng Liên",
+      "target": "Diệp Lang",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Diệp Lang",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 163,
+      "source": "Ngọc Hương (nghệ sĩ)",
+      "target": "Thu An (Soạn giả)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Thu An (Soạn giả)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 164,
+      "source": "Phùng Há",
+      "target": "Lê Công Phước",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Lê Công Phước",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 165,
+      "source": "Nguyễn Lai",
+      "target": "Ngô Thị Liễu",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Ngô Thị Liễu",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 166,
+      "source": "Kim Chi (nghệ sĩ)",
+      "target": "Nguyễn Hồng Sến",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Nguyễn Hồng Sến",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 167,
+      "source": "Nguyễn Anh Dũng (diễn viên)",
+      "target": "Phương Thanh (diễn viên)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Phương Thanh (diễn viên)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 168,
+      "source": "Phạm Quỳnh Anh",
+      "target": "Quang Huy (nhà quản lý)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Quang Huy (nhà quản lý)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ đích xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 169,
+      "source": "Trần Ngọc Danh",
+      "target": "Thái Thị Liên",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Thái Thị Liên",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ đích xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 170,
+      "source": "Hoàng Giang (nghệ sĩ)",
+      "target": "Diệp Lang",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Diệp Lang",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ đích xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 171,
+      "source": "Ngô Mạnh Lân",
+      "target": "Ngọc Lan (diễn viên, sinh 1942)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Ngọc Lan (diễn viên, sinh 1942)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 172,
+      "source": "Thanh Tú (diễn viên)",
+      "target": "Phạm Kỳ Nam",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Phạm Kỳ Nam",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 173,
+      "source": "Hồ Ngọc Hà",
+      "target": "Kim Lý",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Kim Lý",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 174,
+      "source": "Nguyễn Hồng Sến",
+      "target": "Thúy An",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Thúy An",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 175,
+      "source": "Nguyễn Hồng Sến",
+      "target": "Kim Chi (nghệ sĩ)",
+      "rel_type": "MARRIED_TO",
+      "group": "Infobox",
+      "evidence": "Hôn phối / Bạn đời: Kim Chi (nghệ sĩ)",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ nguồn xác nhận hôn nhân / bạn đời"
+    },
+    {
+      "index": 176,
+      "source": "Lệ Thủy (nghệ sĩ)",
+      "target": "Nhà hát Cải lương Trần Hữu Trang",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Hiện tại, bà vẫn cộng tác thường xuyên với Nhà hát Cải lương Trần Hữu Trang trong các chương trình biểu diễn phục vụ công chúng và tham gia đi show ở các tỉnh thành",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 177,
+      "source": "Đào Đức",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Những năm 1970, ông về công tác tại Hãng phim truyện Việt Nam và đã tham gia làm hàng chục bộ phim truyện nhựa, đoạt 4 giải thiết kế mỹ thuật phim truyện nhựa xuất sắc trong các phim Trần Quốc Toản ra quân của đạo diễn Bạch Diệp",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 178,
+      "source": "Đinh Thái Thụy",
+      "target": "Hãng phim Giải Phóng",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Tốt nghiệp cả hai trường, Đinh Thái Thụy làm việc tại Hãng phim Giải Phóng từ năm 2008 đến 2019",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 179,
+      "source": "Vũ Châu (đạo diễn)",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Từ năm 1965 đến 1973, Vũ Châu là giáo viên dạy Văn sau đó chuyển sang công tác tại Hãng Phim truyện Việt Nam",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 180,
+      "source": "Hồng Đăng (diễn viên)",
+      "target": "Trung tâm Phim truyền hình Việt Nam",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Anh từng là diễn viên của Nhà hát Kịch Hà Nội và Trung tâm Phim truyền hình Việt Nam, Đài Truyền hình Việt Nam",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 181,
+      "source": "Phạm Quang Vĩnh",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Năm 1964, họa sĩ Phạm Quang Vĩnh về công tác tại Hãng phim truyện Việt Nam, trong cùng năm ông tham gia sản xuất bộ phim Biển Lửa, với vai trò trợ lý cho họa sĩ Lê Thanh Đức",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 182,
+      "source": "Bùi Tuấn Dũng",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Bùi Tuấn Dũng (sinh ngày 12 tháng 7 năm 1972) là đạo diễn phim làm việc tại Hãng phim truyện Việt Nam",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 183,
+      "source": "Thảo Quyên",
+      "target": "Nhà hát Chèo Hà Nội",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Thảo Quyên là một nghệ sĩ ưu tú nổi tiếng trong lĩnh vực sân khấu chèo, hiện đang công tác tại Nhà hát Chèo Hà Nội",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 184,
+      "source": "Đoàn Quốc",
+      "target": "Hãng phim Nguyễn Đình Chiểu",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Năm 1997, ông chuyển sang công tác tại Hãng phim Nguyễn Đình Chiểu với bộ phim đầu tiên tại đây là Người học trò đất Gia Định xưa của đạo diễn Huy Thành",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 185,
+      "source": "Hương Xuân (diễn viên)",
+      "target": "Hãng phim Giải Phóng",
+      "rel_type": "AFFILIATED_WITH",
+      "group": "Infobox/Text",
+      "evidence": "Năm 1976, Lê Hoàng Hoa và Sáu Của tuyển vào vai Ba Liên trong bộ phim điện ảnh Kỷ niệm vùng ven, sau đó bà vào biên chế diễn viên của Hãng phim Giải Phóng",
+      "verified": true,
+      "reason": "Bài viết nghệ sĩ xác nhận nơi công tác / gắn bó"
+    },
+    {
+      "index": 186,
+      "source": "Thanh Hằng",
+      "target": "Việt Anh (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'gia tài bác sĩ'"
+    },
+    {
+      "index": 187,
+      "source": "Hoa Thúy",
+      "target": "Diệu Hương (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'tình khúc bạch dương'"
+    },
+    {
+      "index": 188,
+      "source": "Phan Thị Mơ",
+      "target": "Trần Bảo Sơn",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'ngôi nhà trong hẻm'"
+    },
+    {
+      "index": 189,
+      "source": "Tuyết Thu",
+      "target": "Lê Hạ Anh",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'kế hoạch hoàn hảo'"
+    },
+    {
+      "index": 190,
+      "source": "Duy Hậu",
+      "target": "Xuân Bắc (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'sóng ở đáy sông'"
+    },
+    {
+      "index": 191,
+      "source": "Bùi Bài Bình",
+      "target": "Kim Oanh (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'đầu bếp và đại gia'"
+    },
+    {
+      "index": 192,
+      "source": "Lý Hùng",
+      "target": "Ngọc Hiệp (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'tây sơn hiệp khách'"
+    },
+    {
+      "index": 193,
+      "source": "Đại Nghĩa (diễn viên)",
+      "target": "Trương Minh Quốc Thái",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'dưới cờ đại nghĩa'"
+    },
+    {
+      "index": 194,
+      "source": "Tsai Chin (diễn viên)",
+      "target": "Albert Tsai",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'everest: người tuyết bé nhỏ'"
+    },
+    {
+      "index": 195,
+      "source": "Lâm Tới",
+      "target": "Mai Châu (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'cuộc chiến đấu vẫn còn tiếp diễn'"
+    },
+    {
+      "index": 196,
+      "source": "Huệ Minh",
+      "target": "Kim Tiểu Long",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'hướng nghiệp'"
+    },
+    {
+      "index": 197,
+      "source": "Doãn Quốc Đam",
+      "target": "Hồng Diễm",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 2 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'trung tâm phim truyền hình việt nam'"
+    },
+    {
+      "index": 198,
+      "source": "Lê Hạ Anh",
+      "target": "Ngô Kiến Huy",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'yêu đi, đừng sợ!'"
+    },
+    {
+      "index": 199,
+      "source": "Khương Lê",
+      "target": "Thanh Sơn (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'hẹn em ngày nhật thực'"
+    },
+    {
+      "index": 200,
+      "source": "Hoài Linh",
+      "target": "Trấn Thành",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'gia sư nữ quái'"
+    },
+    {
+      "index": 201,
+      "source": "Cao Thái Hà",
+      "target": "Kiều Minh Tuấn",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'yêu đi, đừng sợ!'"
+    },
+    {
+      "index": 202,
+      "source": "Mai Thu Huyền",
+      "target": "Quốc Tuấn (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'gia sư nữ quái'"
+    },
+    {
+      "index": 203,
+      "source": "Cường Seven",
+      "target": "Lâm Vissay",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'truy sát'"
+    },
+    {
+      "index": 204,
+      "source": "Lê Bê La",
+      "target": "Đàm Phương Linh",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'chiếc vòng ngọc bích'"
+    },
+    {
+      "index": 205,
+      "source": "Don Nguyễn",
+      "target": "Võ Ngọc Trai",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'em chưa 18'"
+    },
+    {
+      "index": 206,
+      "source": "Lê Quỳnh",
+      "target": "Manuel Conde",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Minh chứng suy luận đóng chung phim từ danh sách dàn cast Infobox"
+    },
+    {
+      "index": 207,
+      "source": "Trần Lực",
+      "target": "Thu Hà (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'chuyện nhà mộc'"
+    },
+    {
+      "index": 208,
+      "source": "Trúc Anh",
+      "target": "Yeye Nhật Hạ",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'đánh cắp số phận'"
+    },
+    {
+      "index": 209,
+      "source": "Huỳnh Anh Tuấn",
+      "target": "Ngọc Quyên",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Minh chứng suy luận đóng chung phim từ danh sách dàn cast Infobox"
+    },
+    {
+      "index": 210,
+      "source": "Tuấn Tú",
+      "target": "Quang Sự",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'dưới ô cửa sáng đèn'"
+    },
+    {
+      "index": 211,
+      "source": "Khương Ngọc",
+      "target": "Huỳnh Anh Tuấn",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'taxi'"
+    },
+    {
+      "index": 212,
+      "source": "Hạnh Thúy",
+      "target": "Lê Khánh",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'gái già lắm chiêu v: những cuộc đời vương giả'"
+    },
+    {
+      "index": 213,
+      "source": "Bùi Như Lai",
+      "target": "Lương Thu Trang",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'cha tôi, người ở lại'"
+    },
+    {
+      "index": 214,
+      "source": "BB Minh Thúy",
+      "target": "Mạnh Trường",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'huyền sử thiên đô'"
+    },
+    {
+      "index": 215,
+      "source": "Hạnh Thúy",
+      "target": "Xuân Lan",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 2 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'tiệm bánh hoàng tử bé 2'"
+    },
+    {
+      "index": 216,
+      "source": "Lê Công Tuấn Anh",
+      "target": "Trịnh Thịnh",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'anh chỉ có mình em'"
+    },
+    {
+      "index": 217,
+      "source": "Lương Thế Thành",
+      "target": "Trí Quang",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'không lối thoát'"
+    },
+    {
+      "index": 218,
+      "source": "Hà Việt Dũng",
+      "target": "Xuân Phúc (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'trời cao nguyên xanh'"
+    },
+    {
+      "index": 219,
+      "source": "Bảo Thanh (diễn viên)",
+      "target": "Lê Hồng Quang (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'vào nam ra bắc'"
+    },
+    {
+      "index": 220,
+      "source": "Ngọc Quyên",
+      "target": "Huỳnh Anh Tuấn",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Minh chứng suy luận đóng chung phim từ danh sách dàn cast Infobox"
+    },
+    {
+      "index": 221,
+      "source": "Thu Quỳnh",
+      "target": "Quang Tèo",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'những ngày không quên'"
+    },
+    {
+      "index": 222,
+      "source": "Hà Xuyên",
+      "target": "Kim Khánh (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'lưới trời'"
+    },
+    {
+      "index": 223,
+      "source": "Trung Anh",
+      "target": "Tiến Lộc (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'những ngày không quên'"
+    },
+    {
+      "index": 224,
+      "source": "Bảo Anh (diễn viên)",
+      "target": "Tùng Dương (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'độc đạo'"
+    },
+    {
+      "index": 225,
+      "source": "Nhật Linh (diễn viên)",
+      "target": "Lâm Vỹ Dạ",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'kính vạn hoa: bắt đền con ma'"
+    },
+    {
+      "index": 226,
+      "source": "Hoàng Oanh (người dẫn chương trình)",
+      "target": "Huỳnh Anh (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'biệt dược đen'"
+    },
+    {
+      "index": 227,
+      "source": "Võ Thành Tâm",
+      "target": "Huỳnh Minh Kiên",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'trại buôn người'"
+    },
+    {
+      "index": 228,
+      "source": "Minh Luân",
+      "target": "Ninh Dương Lan Ngọc",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'gia đình phép thuật'"
+    },
+    {
+      "index": 229,
+      "source": "Thanh Hương (diễn viên)",
+      "target": "Ngọc Quỳnh (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'hoa sữa về trong gió'"
+    },
+    {
+      "index": 230,
+      "source": "Quang Sự",
+      "target": "Bùi Bài Bình",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 2 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'gia đình mình vui bất thình lình'"
+    },
+    {
+      "index": 231,
+      "source": "Minh Dự",
+      "target": "Trần Nghĩa (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'đảo độc đắc – tử mẫu thiên linh cái'"
+    },
+    {
+      "index": 232,
+      "source": "Hoàng Phúc (diễn viên)",
+      "target": "Lê Anh Tuấn",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'nhiệm vụ đặc biệt'"
+    },
+    {
+      "index": 233,
+      "source": "Minh Hòa (diễn viên)",
+      "target": "Linh Huệ",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'chủ tịch tỉnh'"
+    },
+    {
+      "index": 234,
+      "source": "Thanh Hương (diễn viên)",
+      "target": "Bùi Bài Bình",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 3 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'những ngày không quên'"
+    },
+    {
+      "index": 235,
+      "source": "Hồng Quế",
+      "target": "Maria Trần",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'truy sát'"
+    },
+    {
+      "index": 236,
+      "source": "Kim Xuân",
+      "target": "Đinh Y Nhung",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'câu chuyện pháp đình'"
+    },
+    {
+      "index": 237,
+      "source": "Thanh Quý",
+      "target": "Tô Dũng",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 2 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'không giới hạn'"
+    },
+    {
+      "index": 238,
+      "source": "Hoàng Sơn (diễn viên)",
+      "target": "Hạnh Thúy",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'lẵng hoa tình yêu'"
+    },
+    {
+      "index": 239,
+      "source": "Mạnh Trường",
+      "target": "Thu Quỳnh (diễn viên)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'hương vị tình thân'"
+    },
+    {
+      "index": 240,
+      "source": "Phương Hằng (diễn viên)",
+      "target": "Thanh Bình (diễn viên, sinh 1985)",
+      "rel_type": "CO_STARRED",
+      "group": "Inferred",
+      "evidence": "Đóng chung trong 1 tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đóng chung trong cache: 'thứ ba học trò'"
+    },
+    {
+      "index": 241,
+      "source": "Nguyễn Phương Điền",
+      "target": "Mai Phương Thúy",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'âm tính'"
+    },
+    {
+      "index": 242,
+      "source": "Bảo Nhân",
+      "target": "Khương Lê",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'gái già lắm chiêu v: những cuộc đời vương giả'"
+    },
+    {
+      "index": 243,
+      "source": "Đức Thịnh (đạo diễn)",
+      "target": "Duy Khánh (diễn viên)",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'chủ tịch giao hàng'"
+    },
+    {
+      "index": 244,
+      "source": "Nguyễn Dương",
+      "target": "Lê Phương",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'chiếc vòng ngọc bích'"
+    },
+    {
+      "index": 245,
+      "source": "Trọng Trinh",
+      "target": "Trung Hiếu (diễn viên)",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'mưa bóng mây'"
+    },
+    {
+      "index": 246,
+      "source": "Nguyễn Quang Dũng (đạo diễn)",
+      "target": "Khổng Tú Quỳnh",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'tháng năm rực rỡ'"
+    },
+    {
+      "index": 247,
+      "source": "Nguyễn Phương Điền",
+      "target": "Vũ Ngọc Ánh (diễn viên)",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'mẹ rơm'"
+    },
+    {
+      "index": 248,
+      "source": "Lưu Trọng Ninh",
+      "target": "Hồng Kim Hạnh",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Minh chứng suy luận đạo diễn chỉ đạo diễn xuất từ Infobox phim"
+    },
+    {
+      "index": 249,
+      "source": "Vũ Minh Trí",
+      "target": "Hương Giang (sinh 1989)",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'mùa hoa tìm lại'"
+    },
+    {
+      "index": 250,
+      "source": "Đinh Tuấn Vũ",
+      "target": "Khánh Hiền",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'taxi, em tên gì?'"
+    },
+    {
+      "index": 251,
+      "source": "Phan Gia Nhật Linh",
+      "target": "Lan Phương",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'tử chiến trên không'"
+    },
+    {
+      "index": 252,
+      "source": "Võ Thanh Hòa",
+      "target": "Trung Dân",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'kính vạn hoa: bắt đền con ma'"
+    },
+    {
+      "index": 253,
+      "source": "Quách Khoa Nam",
+      "target": "Trí Quang",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'mật mã hoa hồng vàng'"
+    },
+    {
+      "index": 254,
+      "source": "Zach Lipovsky",
+      "target": "Teo Briones",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'lưỡi hái tử thần: huyết thống'"
+    },
+    {
+      "index": 255,
+      "source": "Trần Hàm (đạo diễn)",
+      "target": "Yaya Trương Nhi",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'âm mưu giày gót nhọn'"
+    },
+    {
+      "index": 256,
+      "source": "Nguyễn Thanh Vân (đạo diễn)",
+      "target": "Bảo Hân",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'bình minh đỏ'"
+    },
+    {
+      "index": 257,
+      "source": "Derek Nguyen",
+      "target": "Phi Phụng",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'cô hầu gái'"
+    },
+    {
+      "index": 258,
+      "source": "Trần Quốc Trọng",
+      "target": "Kiều Anh",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'hai phía chân trời'"
+    },
+    {
+      "index": 259,
+      "source": "Vũ Hồng Sơn",
+      "target": "Hồng Đăng (diễn viên)",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'những ngọn nến trong đêm'"
+    },
+    {
+      "index": 260,
+      "source": "Nguyễn Xuân Hiệp",
+      "target": "Hồng Ánh",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'hãng phim truyền hình thành phố hồ chí minh'"
+    },
+    {
+      "index": 261,
+      "source": "Mỹ Tâm",
+      "target": "Mai Tài Phến",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'tài'"
+    },
+    {
+      "index": 262,
+      "source": "Nguyễn Phương Điền",
+      "target": "Trung Dũng (diễn viên)",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'dưới cờ đại nghĩa'"
+    },
+    {
+      "index": 263,
+      "source": "Tất Bình",
+      "target": "Trần Lực",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'người đi tìm dĩ vãng'"
+    },
+    {
+      "index": 264,
+      "source": "Nguyễn Quang Minh (đạo diễn)",
+      "target": "Thanh Trúc",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'rồi 30 năm sau'"
+    },
+    {
+      "index": 265,
+      "source": "Namcito",
+      "target": "Mai Thanh Hoàng",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'gái già lắm chiêu v: những cuộc đời vương giả'"
+    },
+    {
+      "index": 266,
+      "source": "Ngô Thanh Vân",
+      "target": "Thuận Nguyễn",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'thanh sói – cúc dại trong đêm'"
+    },
+    {
+      "index": 267,
+      "source": "Vũ Trường Khoa",
+      "target": "Hoàng Hải (diễn viên)",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'gia đình trái dấu'"
+    },
+    {
+      "index": 268,
+      "source": "Namcito",
+      "target": "Quyền Linh",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'chốt đơn!'"
+    },
+    {
+      "index": 269,
+      "source": "Nguyễn Quang Minh (đạo diễn)",
+      "target": "Yeye Nhật Hạ",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'gió ngược chiều'"
+    },
+    {
+      "index": 270,
+      "source": "Leon Lê",
+      "target": "Liên Bỉnh Phát",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'song lang'"
+    },
+    {
+      "index": 271,
+      "source": "Tất Bình",
+      "target": "Thu Quỳnh",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'huyền sử thiên đô'"
+    },
+    {
+      "index": 272,
+      "source": "Đỗ Thanh Hải",
+      "target": "Kiều Thanh",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'nhà có ba chị em'"
+    },
+    {
+      "index": 273,
+      "source": "Trần Hàm (đạo diễn)",
+      "target": "Đinh Y Nhung",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'tiệm ăn của quỷ'"
+    },
+    {
+      "index": 274,
+      "source": "Trần Thanh Huy",
+      "target": "Thiên Kim (diễn viên)",
+      "rel_type": "DIRECTED_ACTOR",
+      "group": "Inferred",
+      "evidence": "Đạo diễn chỉ đạo diễn xuất trong tác phẩm",
+      "verified": true,
+      "reason": "Tìm thấy tác phẩm đạo diễn chỉ đạo diễn viên: 'ròm'"
+    },
+    {
+      "index": 275,
+      "source": "Nguyễn Phương Điền",
+      "target": "Quang Tuấn",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Năm 2006, Quang Tuấn được đạo diễn Phương Điền phát hiện và anh bắt đầu đóng phim truyền hình với bộ phim truyền hình Cải ơi đóng cùng nghệ sĩ Mạc Can",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 276,
+      "source": "Viễn Châu",
+      "target": "Thanh Tuyền (ca sĩ)",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Bà còn được soạn giả Viễn Châu dìu dắt tập ca Vọng cổ",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 277,
+      "source": "Tất Bình",
+      "target": "Khánh Huyền",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Năm 1988, khi mới là sinh viên năm 2 khoa thanh nhạc, Khánh Huyền được diễn viên Tất Bình phát hiện và giới thiệu với đạo diễn Trần Vũ khi ông đang thực hiện bộ phim truyện nhựa Anh và em",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 278,
+      "source": "Ba Vân",
+      "target": "Tấn Tài (nghệ sĩ)",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Năm 1962, Tấn Tài về cộng tác với đoàn hát Thủ Đô của ông bầu Ba Bản, được nghệ sĩ Ba Vân tận tâm chỉ dạy, ông đã thành công khi thủ vai Điệp Nhứt Lang (vở Cát Dung Phương Tử) của soạn giả Thiếu Linh, vai diễn này giúp ông đoạt Huy chương vàng giải Thanh Tâm năm 1963",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 279,
+      "source": "Công Ninh",
+      "target": "Việt Hương",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Việt Hương từng theo học tại Trường Nghệ thuật Sân khấu II (nay gọi là Trường Đại học Sân khấu – Điện ảnh Thành phố Hồ Chí Minh) là học trò của nghệ sĩ Công Ninh khi còn học dự thính 1 năm trước khi chính thức trở thành sinh viên của trường",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 280,
+      "source": "Đào Bá Sơn",
+      "target": "Lê Thanh Sơn (đạo diễn)",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Sơn mong muốn tự dàn dựng một vở nhạc kịch Rock cho riêng mình, nên quyết định học thêm ngành đạo diễn tại trường Đại học Sân khấu – Điện ảnh Thành phố Hồ Chí Minh, anh là học trò của đạo diễn Đào Bá Sơn",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 281,
+      "source": "Xuân Huyền",
+      "target": "Giang Còi",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Ông là học trò của nghệ sĩ Xuân Huyền, học cùng lớp với nhiều bạn học nổi tiếng sau này như Chiều Xuân, Bùi Thạc Chuyên, Tú Oanh",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 282,
+      "source": "Công Ninh",
+      "target": "Hứa Minh Đạt",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Anh có cơ hội gặp gỡ và trở thành học trò của Công Ninh, chính người thấy này là cầu nối cho anh làm quen với những nghệ sĩ khác như: Hoài Linh, Hoàng Mèo, Tấn Beo, Long Đẹp Trai, Hữu Lộc",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 283,
+      "source": "Năm Châu",
+      "target": "Mai Thành",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Vì yêu thích ca hát nên từ nhỏ ông đã tự học qua sách, sau khi thi trượt tú tài, năm 16 tuổi ông thi vào Trường quốc gia Kịch nghệ Sài Gòn, khóa diễn viên đầu tiên với hạng điểm thi vào áp chót (15/16), được nghệ sĩ Năm Châu và Phùng Há chỉ dạy",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 284,
+      "source": "Công Ninh",
+      "target": "Vũ Ngọc Đãng",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Anh từng theo học tại Đại học Sân khấu - Điện ảnh TP HCM, là học trò của NSƯT Công Ninh",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 285,
+      "source": "Hữu Lộc",
+      "target": "Trường Giang (nghệ sĩ)",
+      "rel_type": "MENTORED",
+      "group": "OpenIE Text",
+      "evidence": "Năm 2007, sau một lần đóng thế vai quần chúng của một người bạn, anh được cố nghệ sĩ Hữu Lộc phát hiện và cho gia nhập sân khấu kịch Nụ cười Mới",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận quan hệ thầy trò / nâng đỡ"
+    },
+    {
+      "index": 286,
+      "source": "Lê Hồng Chương",
+      "target": "Hãng phim Tài liệu và Khoa học Trung ương",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Lê Hồng Chương sinh năm 1957, trong gia đình có ông nội làm quan trong triều đình nhà Nguyễn, bố là đạo diễn Lê Huân - nguyên Giám đốc Hãng phim Tài liệu và Khoa học Trung ương",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 287,
+      "source": "Khải Hưng",
+      "target": "Trung tâm Phim truyền hình Việt Nam",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Năm 1995, ông được bổ nhiệm làm Phó Giám đốc rồi Giám đốc Hãng phim truyền hình Việt Nam",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 288,
+      "source": "Nguyễn Ngọc Hiến",
+      "target": "Hãng phim Nguyễn Đình Chiểu",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Nguyễn Ngọc Hiến (1942 - ) có nghệ danh Tư Diệu, là nam đạo diễn điện ảnh và phim tài liệu người Việt Nam, ông từng giữ chức Giám đốc Hãng phim Nguyễn Đình Chiểu",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 289,
+      "source": "Lê Đức Tiến",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Năm 2003, khi đang làm Phó giám đốc Hãng phim truyện Việt Nam, Lê Đức Tiến được bổ nhiệm làm Giám đốc Hãng phim Giải Phóng",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 290,
+      "source": "Lý Thái Bảo",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Lý Thái Bảo có một người con trai là Lý Thái Dũng, nguyên Phó giám đốc Hãng phim truyện Việt Nam",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 291,
+      "source": "Hải Ninh (nghệ sĩ)",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Trong thời kỳ ông làm giám đốc Hãng phim truyện Việt Nam, hãng gặp khá nhiều khó khăn khi cơ chế chuyển đổi",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 292,
+      "source": "Khương Mễ",
+      "target": "Hãng phim truyện Việt Nam",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Năm 1954, Khương Mễ cùng 22 nghệ sĩ khác cũng được tập kết ra Bắc để xây dựng cơ sở và đào tạo nhân lực cho Điện ảnh Việt Nam, thành lập Hãng phim truyện Việt Nam",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 293,
+      "source": "Ma Cường",
+      "target": "Hãng phim Tài liệu và Khoa học Trung ương",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Ma Cường (sinh ngày 15 tháng 9 năm 1933) là một nhà quay phim, đạo diễn điện ảnh Việt Nam, nguyên đại biểu Quốc hội Việt Nam khóa 4, Giám đốc Hãng phim Tài liệu và Khoa học Trung ương",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 294,
+      "source": "Hoàng Thúy Lan",
+      "target": "Hãng phim Giải Phóng",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Sau này, bà từng làm Phó giám đốc Hãng phim Giải Phóng",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 295,
+      "source": "Lưu Xuân Thư",
+      "target": "Hãng phim Tài liệu và Khoa học Trung ương",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Ông từng tham gia giảng dạy tại Trường Đại học Sân khấu – Điện ảnh Hà Nội và giữ chức Giám đốc Hãng phim Tài liệu và Khoa học Trung ương",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 296,
+      "source": "Mai Lộc",
+      "target": "Hãng phim Giải Phóng",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "* Giám đốc Hãng phim Giải Phóng",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 297,
+      "source": "Nguyễn Hồng Nghi",
+      "target": "Hãng phim Tài liệu và Khoa học Trung ương",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Nguyễn Hồng Nghi (19 tháng 12 năm 1918 – 12 tháng 2 năm 1991) là một trong những nhà nhiếp ảnh, đạo diễn điện ảnh tiên phong của điện ảnh cách mạng Việt Nam, nguyên Phó Giám đốc Hãng phim Tài liệu và Khoa học Trung ương, Tổng thư ký đầu tiên của Hội Điện ảnh Việt Nam",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 298,
+      "source": "Phạm Khắc",
+      "target": "Hãng phim Truyền hình Thành phố Hồ Chí Minh",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": ", hiện đang là Giám đốc Hãng phim Truyền hình Thành phố Hồ Chí Minh",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 299,
+      "source": "Nguyễn Như Ái",
+      "target": "Hãng phim Tài liệu và Khoa học Trung ương",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Ông từng là Giám đốc Hãng phim Tài liệu và Khoa học Trung ương, được phong tặng danh hiệu Nghệ sĩ nhân dân và Giải thưởng nhà nước về Văn học nghệ thuật",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    },
+    {
+      "index": 300,
+      "source": "Đỗ Phú Hải",
+      "target": "Hãng phim Truyền hình Thành phố Hồ Chí Minh",
+      "rel_type": "FOUNDED",
+      "group": "OpenIE Text",
+      "evidence": "Đỗ Phú Hải (sinh ngày 11 tháng 11 năm 1963) là một nam đạo diễn, biên tập người Việt Nam, từng giữ chức vị Trưởng phòng phim truyện và Phó giám đốc Hãng phim Truyền hình Thành phố Hồ Chí Minh",
+      "verified": true,
+      "reason": "Minh chứng văn bản xác nhận vai trò sáng lập / lãnh đạo"
+    }
+  ]
+}

@@ -11,6 +11,7 @@ Trích xuất Infobox và văn bản Sự nghiệp để xây dựng đồ thị
 
 import os
 import sys
+import re
 import time
 import logging
 from typing import Set, Dict, List, Tuple, Any
@@ -28,7 +29,9 @@ from cinema_extractor import (
     parse_movie_infobox,
     parse_person_infobox,
     extract_career_relations,
-    extract_wiki_links
+    extract_wiki_links,
+    is_valid_person_candidate,
+    KNOWN_ORGANIZATIONS
 )
 
 if sys.platform == "win32":
@@ -185,6 +188,48 @@ def build_vietnam_cinema_graph() -> CinemaGraph:
 
     # Tập hợp các thực thể đã biết để phục vụ Entity Linking và trích xuất văn bản
     known_entities: Set[str] = set(articles_data.keys())
+    known_artworks: Set[str] = set()
+    known_orgs: Set[str] = set()
+    known_persons: Set[str] = set()
+
+    for title, wikitext in articles_data.items():
+        mv_info = parse_movie_infobox(title, wikitext)
+        title_lower = title.lower()
+        if (
+            any(k in title_lower for k in (
+                "hãng phim", "hãng", "sân khấu", "nhà hát", "đoàn kịch", "đoàn chèo", "đoàn ca múa", 
+                "công ty cổ phần phim", "công ty", "bhd", "galaxy", "studio", "đài truyền hình", 
+                "trung tâm phim", "vtv", "htv"
+            )) or
+            title in KNOWN_ORGANIZATIONS
+        ):
+            known_orgs.add(title)
+        elif (
+            mv_info["is_movie"] or 
+            any(k in title_lower for k in (
+                "(phim", "phim truyền hình", "(vở chèo)", "(vở kịch)", "(vở cải lương)", 
+                "(vở opera)", "(vở tuồng)", "(thoại kịch)", "(nhạc kịch)", "(kịch bản)", "(kịch)",
+                "vở kịch", "vở chèo", "vở cải lương", "vở tuồng"
+            )) or
+            title.startswith("Phim ") or
+            title_lower.startswith("phim ") or
+            title_lower in ("chèo", "tuồng", "cải lương", "thoại kịch", "nhạc kịch", "hát bội")
+        ):
+            known_artworks.add(title)
+        elif (
+            title.startswith("Giải ") or
+            title.startswith("Liên hoan ") or
+            title.startswith("Danh sách ") or
+            any(k in title_lower for k in ("giải cánh diều", "giải mai vàng", "liên hoan phim", "lịch sử điện ảnh"))
+        ):
+            # Exclude awards, festivals, lists, and genre topics from default Person
+            pass
+        else:
+            known_persons.add(title)
+
+    known_artworks_ids = {normalize_id(t) for t in known_artworks}
+    known_orgs_ids = {normalize_id(t) for t in known_orgs}
+    known_persons_ids = {normalize_id(t) for t in known_persons}
 
     # Lưu trữ tạm các quan hệ phát hiện được
     extracted_edges: List[Edge] = []
@@ -201,49 +246,113 @@ def build_vietnam_cinema_graph() -> CinemaGraph:
         # Phân tích Infobox người
         person_info = parse_person_infobox(title, wikitext)
 
-        # Phân loại Node
-        if movie_info["is_movie"]:
+        # Phân loại Node: Ưu tiên Organization trước để không nhầm Trung tâm Phim truyền hình sang Artwork
+        is_org = (
+            any(k in title.lower() for k in (
+                "hãng phim", "hãng", "sân khấu", "nhà hát", "đoàn kịch", "đoàn chèo", "đoàn ca múa", 
+                "công ty cổ phần phim", "công ty", "bhd", "galaxy", "studio", "đài truyền hình", 
+                "trung tâm phim", "vtv", "htv"
+            )) or
+            title in KNOWN_ORGANIZATIONS or
+            title in known_orgs
+        )
+        is_artwork = (
+            not is_org and (
+                movie_info["is_movie"] or
+                any(k in title.lower() for k in (
+                    "(phim", "phim truyền hình", "(vở chèo)", "(vở kịch)", "(vở cải lương)", 
+                    "(vở opera)", "(vở tuồng)", "(thoại kịch)", "(nhạc kịch)", "(kịch bản)", "(kịch)",
+                    "vở kịch", "vở chèo", "vở cải lương", "vở tuồng"
+                )) or
+                title.startswith("Phim ") or
+                title.lower().startswith("phim ") or
+                title.lower() in ("chèo", "tuồng", "cải lương", "thoại kịch", "nhạc kịch", "hát bội") or
+                title in known_artworks
+            )
+        )
+        is_excluded = (
+            not is_org and not is_artwork and (
+                title.startswith("Giải ") or
+                title.startswith("Liên hoan ") or
+                title.startswith("Danh sách ") or
+                any(k in title.lower() for k in ("giải cánh diều", "giải mai vàng", "liên hoan phim", "lịch sử điện ảnh"))
+            )
+        )
+
+        if is_artwork:
             graph.add_node(Node(
                 id=title_id,
                 name=title,
                 label="Artwork",
                 metadata={"type": "Phim điện ảnh / Truyền hình", "year": movie_info["year"]}
             ))
+            if title_id in graph.nodes:
+                graph.nodes[title_id].label = "Artwork"
             
             # Quan hệ 1: DIRECTED (Đạo diễn -> Phim)
             for d in movie_info["directors"]:
-                d_id = normalize_id(d)
-                graph.add_node(Node(id=d_id, name=d, label="Person", metadata={"roles": "Đạo diễn"}))
+                d_clean = d.strip()
+                if not d_clean or len(d_clean) < 2 or d_clean.startswith(("#", ":", "Tập tin")):
+                    continue
+                if d_clean in known_artworks or d_clean in known_orgs:
+                    continue
+                d_id = normalize_id(d_clean)
+                graph.add_node(Node(id=d_id, name=d_clean, label="Person", metadata={"roles": "Đạo diễn"}))
                 extracted_edges.append(Edge(source_id=d_id, target_id=title_id, rel_type="DIRECTED", evidence=f"Đạo diễn phim {title}"))
             
             # Quan hệ 2: ACTED_IN (Diễn viên -> Phim)
             for a in movie_info["actors"]:
-                a_id = normalize_id(a)
-                graph.add_node(Node(id=a_id, name=a, label="Person", metadata={"roles": "Diễn viên"}))
+                a_clean = a.strip()
+                if not a_clean or len(a_clean) < 2 or a_clean.startswith(("#", ":", "Tập tin")):
+                    continue
+                if a_clean in known_artworks or a_clean in known_orgs:
+                    continue
+                a_id = normalize_id(a_clean)
+                graph.add_node(Node(id=a_id, name=a_clean, label="Person", metadata={"roles": "Diễn viên"}))
                 extracted_edges.append(Edge(source_id=a_id, target_id=title_id, rel_type="ACTED_IN", evidence=f"Diễn viên trong {title}"))
 
-            # Quan hệ 6: PRODUCED (Nhà sản xuất -> Phim)
+            # Quan hệ 6: PRODUCED / PRODUCED_BY
             for p in movie_info["producers"]:
                 p_id = normalize_id(p)
-                graph.add_node(Node(id=p_id, name=p, label="Person", metadata={"roles": "Nhà sản xuất"}))
-                extracted_edges.append(Edge(source_id=p_id, target_id=title_id, rel_type="PRODUCED", evidence=f"Nhà sản xuất phim {title}"))
+                p_lower = p.lower()
+                is_p_org = (
+                    any(k in p_lower for k in ("đài", "truyền hình", "trung tâm", "hãng", "công ty", "studio", "bhd", "galaxy", "nhà hát", "đoàn", "vtv", "htv", "vfc"))
+                    or p in known_orgs
+                    or p_id in known_orgs_ids
+                )
+                if is_p_org:
+                    graph.add_node(Node(id=p_id, name=p, label="Organization", metadata={"type": "Hãng phim / Đài truyền hình"}))
+                    extracted_edges.append(Edge(source_id=title_id, target_id=p_id, rel_type="PRODUCED_BY", evidence=f"Sản xuất bởi {p}"))
+                else:
+                    if is_valid_person_candidate(p, known_artworks, known_orgs):
+                        graph.add_node(Node(id=p_id, name=p, label="Person", metadata={"roles": "Nhà sản xuất"}))
+                        extracted_edges.append(Edge(source_id=p_id, target_id=title_id, rel_type="PRODUCED", evidence=f"Nhà sản xuất phim {title}"))
 
             # Quan hệ 7: PRODUCED_BY (Phim -> Hãng phim/Đài truyền hình)
             for s in movie_info["studios"]:
                 s_id = normalize_id(s)
+                s_lower = s.lower().strip()
+                if s_lower in ("điện thoại", "tết", "âm lịch", "cộng hòa séc", "praha", "việt nam") or len(s_lower) < 3:
+                    continue
+                if any(bad in s_lower for bad in ("sao hỏa", "sao kim", "tác giả", "nhà văn")):
+                    continue
                 graph.add_node(Node(id=s_id, name=s, label="Organization", metadata={"type": "Hãng phim / Đài truyền hình"}))
                 extracted_edges.append(Edge(source_id=title_id, target_id=s_id, rel_type="PRODUCED_BY", evidence=f"Sản xuất bởi {s}"))
 
-            movie_actor_map[title_id] = [normalize_id(a) for a in movie_info["actors"]]
-            movie_director_map[title_id] = [normalize_id(d) for d in movie_info["directors"]]
+            movie_actor_map[title_id] = [normalize_id(a) for a in movie_info["actors"] if len(a.strip()) >= 2 and not a.strip().startswith(("#", ":", "Tập tin")) and a not in known_artworks and a not in known_orgs]
+            movie_director_map[title_id] = [normalize_id(d) for d in movie_info["directors"] if len(d.strip()) >= 2 and not d.strip().startswith(("#", ":", "Tập tin")) and d not in known_artworks and d not in known_orgs]
 
-        elif any(k in title.lower() for k in ["hãng phim", "sân khấu", "nhà hát", "đoàn kịch", "công ty cổ phần phim", "bhd", "galaxy"]):
+        elif is_org:
             graph.add_node(Node(
                 id=title_id,
                 name=title,
                 label="Organization",
                 metadata={"type": "Đơn vị nghệ thuật"}
             ))
+            if title_id in graph.nodes:
+                graph.nodes[title_id].label = "Organization"
+        elif is_excluded:
+            continue
         else:
             # Mặc định là Person
             graph.add_node(Node(
@@ -252,33 +361,92 @@ def build_vietnam_cinema_graph() -> CinemaGraph:
                 label="Person",
                 metadata={"roles": person_info["roles"]}
             ))
+            if title_id in graph.nodes:
+                if graph.nodes[title_id].label not in ("Organization", "Artwork"):
+                    graph.nodes[title_id].label = "Person"
 
             # Quan hệ 10: MARRIED_TO (Vợ chồng / Cặp đôi nghệ sĩ)
             for sp in person_info["spouses"]:
                 sp_id = normalize_id(sp)
+                sp_lower = sp.lower().strip()
+                # 1. Phải là tên người hợp lệ: ít nhất 2 từ viết hoa, không chứa từ dừng
+                if not is_valid_person_candidate(sp, known_artworks, known_orgs):
+                    continue
+                # 2. Không được là nhãn Organization hoặc Artwork
+                if sp_id in known_artworks_ids or sp_id in known_orgs_ids:
+                    continue
+                if sp in known_artworks or sp in known_orgs:
+                    continue
+                # 3. Loại bỏ thương hiệu xe, quốc gia, ngày tháng, thể loại âm nhạc / nghệ thuật
+                bad_tokens = (
+                    "mercedes", "suzuki", "sanyo", "mitsubishi", "toyota", "honda", "cuba",
+                    "triều tiên", "trung quốc", "liên xô", "nga", "pháp", "đức", "thái lan",
+                    "fidel", "castro", "kim nhật thành", "19 tháng", "17 tháng", "tháng 8", "tháng 10",
+                    "opera", "nhạc đỏ", "bel canto", "chèo", "cải lương", "thanh nhạc", "nhạc kịch",
+                    "talk show", "hiệp định", "genève", "múa ba lê", "giải cánh diều", "vở kịch"
+                )
+                if any(bt in sp_lower for bt in bad_tokens):
+                    continue
+                # 4. Nếu node đã tồn tại trong đồ thị, nhãn phải là Person
+                if sp_id in graph.nodes and graph.nodes[sp_id].label != "Person":
+                    continue
+                if title_id in graph.nodes and graph.nodes[title_id].label != "Person":
+                    continue
+                
                 graph.add_node(Node(id=sp_id, name=sp, label="Person", metadata={"roles": "Nghệ sĩ"}))
-                extracted_edges.append(Edge(source_id=title_id, target_id=sp_id, rel_type="MARRIED_TO", evidence="Vợ chồng / Bạn đời"))
-                extracted_edges.append(Edge(source_id=sp_id, target_id=title_id, rel_type="MARRIED_TO", evidence="Vợ chồng / Bạn đời"))
+                extracted_edges.append(Edge(source_id=title_id, target_id=sp_id, rel_type="MARRIED_TO", evidence=f"Hôn phối / Bạn đời: {sp}"))
+                extracted_edges.append(Edge(source_id=sp_id, target_id=title_id, rel_type="MARRIED_TO", evidence=f"Hôn phối / Bạn đời: {title}"))
 
             # Quan hệ 8: AFFILIATED_WITH (Nghệ sĩ -> Nhà hát / Sân khấu)
             for org in person_info["affiliations"]:
                 org_id = normalize_id(org)
+                if org_id in known_artworks_ids or (org_id in graph.nodes and graph.nodes[org_id].label == "Artwork"):
+                    continue
                 graph.add_node(Node(id=org_id, name=org, label="Organization", metadata={"type": "Nhà hát / Sân khấu"}))
                 extracted_edges.append(Edge(source_id=title_id, target_id=org_id, rel_type="AFFILIATED_WITH", evidence=f"Công tác tại {org}"))
 
+            # Trích xuất ACTED_IN từ các mục danh sách phim trong bài viết diễn viên
+            filmography_pattern = re.compile(
+                r'==\s*(?:danh sách phim|phim đã tham gia|phim điện ảnh|phim truyền hình|tác phẩm tiêu biểu|các phim|sự nghiệp diễn xuất|phim ảnh|tác phẩm điện ảnh|các phim đã tham gia)\s*==\s*(.*?)(?=\n==|$)',
+                re.IGNORECASE | re.DOTALL
+            )
+            for f_match in filmography_pattern.finditer(wikitext):
+                f_sec = f_match.group(1)
+                links = extract_wiki_links(f_sec)
+                for lk in links:
+                    lk_id = normalize_id(lk)
+                    if lk_id in known_artworks_ids and lk_id != title_id:
+                        extracted_edges.append(Edge(source_id=title_id, target_id=lk_id, rel_type="ACTED_IN", evidence=f"Diễn viên trong tác phẩm {lk}"))
+
             # Trích xuất quan hệ từ văn bản sự nghiệp (MENTORED, CO_STARRED, DIRECTED_ACTOR, FOUNDED)
-            text_rels = extract_career_relations(title, wikitext, known_entities)
+            text_rels = extract_career_relations(
+                title, wikitext, known_entities, known_persons, known_artworks, known_orgs
+            )
             for s_ent, t_ent, r_type, ev in text_rels:
                 s_id = normalize_id(s_ent)
                 t_id = normalize_id(t_ent)
                 
-                # Xác định label phù hợp
-                if r_type == "FOUNDED":
-                    graph.add_node(Node(id=s_id, name=s_ent, label="Person"))
-                    graph.add_node(Node(id=t_id, name=t_ent, label="Organization"))
+                # Xác định label phù hợp và bảo vệ nhãn Artwork
+                if r_type in ("FOUNDED", "AFFILIATED_WITH"):
+                    if t_id in known_artworks_ids or (t_id in graph.nodes and graph.nodes[t_id].label == "Artwork"):
+                        continue
+                    if s_id not in graph.nodes:
+                        graph.add_node(Node(id=s_id, name=s_ent, label="Person"))
+                    if t_id not in graph.nodes:
+                        graph.add_node(Node(id=t_id, name=t_ent, label="Organization", metadata={"type": "Đơn vị nghệ thuật"}))
                 else:
-                    graph.add_node(Node(id=s_id, name=s_ent, label="Person"))
-                    graph.add_node(Node(id=t_id, name=t_ent, label="Person"))
+                    if s_id in known_artworks_ids or s_id in known_orgs_ids:
+                        continue
+                    if t_id in known_artworks_ids or t_id in known_orgs_ids:
+                        continue
+                    if s_id in graph.nodes and graph.nodes[s_id].label != "Person":
+                        continue
+                    if t_id in graph.nodes and graph.nodes[t_id].label != "Person":
+                        continue
+                    if s_id not in graph.nodes:
+                        graph.add_node(Node(id=s_id, name=s_ent, label="Person"))
+                    if t_id not in graph.nodes:
+                        graph.add_node(Node(id=t_id, name=t_ent, label="Person"))
                     
                 extracted_edges.append(Edge(source_id=s_id, target_id=t_id, rel_type=r_type, evidence=ev))
 
@@ -342,14 +510,31 @@ def build_vietnam_cinema_graph() -> CinemaGraph:
                     if graph.add_edge(edge):
                         valid_edges_count += 1
                 elif edge.rel_type == "AFFILIATED_WITH" and s_label == "Person":
-                    # Đảm bảo target được gán nhãn Organization
-                    graph.nodes[edge.target_id].label = "Organization"
-                    if graph.add_edge(edge):
-                        valid_edges_count += 1
+                    # Không ghi đè nếu target đã là Artwork
+                    if t_label != "Artwork" and edge.target_id not in known_artworks_ids:
+                        graph.nodes[edge.target_id].label = "Organization"
+                        if graph.add_edge(edge):
+                            valid_edges_count += 1
                 elif edge.rel_type == "FOUNDED" and s_label == "Person":
-                    graph.nodes[edge.target_id].label = "Organization"
-                    if graph.add_edge(edge):
-                        valid_edges_count += 1
+                    # Không ghi đè nếu target đã là Artwork
+                    if t_label != "Artwork" and edge.target_id not in known_artworks_ids:
+                        graph.nodes[edge.target_id].label = "Organization"
+                        if graph.add_edge(edge):
+                            valid_edges_count += 1
+
+    # Khôi phục các tác phẩm phim bị ghi đè sai nhãn thành Artwork
+    RESTORED_ARTWORK_IDS = {
+        "bên_trong_vỏ_kén_vàng",
+        "ngoài_vòng_pháp_luật_2",
+        "xin_nhận_nơi_này_làm_quê_hương",
+        "sài_gòn,_anh_yêu_em",
+        "đấu_trí_(phim_truyền_hình_việt_nam)"
+    }
+    for art_id in RESTORED_ARTWORK_IDS:
+        if art_id in graph.nodes:
+            graph.nodes[art_id].label = "Artwork"
+            if not graph.nodes[art_id].metadata.get("type"):
+                graph.nodes[art_id].metadata["type"] = "Phim điện ảnh / Truyền hình"
 
     logger.info("Đã nạp thành công %d cạnh hợp lệ vào đồ thị.", len(graph.edges))
 

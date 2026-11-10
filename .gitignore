@@ -32,3 +32,8 @@ test_wiki_client.py
 SNA_Report_AI_Graph.pdf
 SNA_REPORT.md
 scratch_query.py
+
+# Temporary test artifacts & agents
+test_*.pdf
+reports/test_*.png
+.agents/

@@ -5,8 +5,41 @@ Hỗ trợ tính toán bậc kết nối, xuất file CSV cho Gephi/NetworkX và
 """
 
 import csv
+import re
 from dataclasses import dataclass, field
 from typing import Dict, List, Set, Any, Optional
+
+def sanitize_cypher_prop(val: Any) -> str:
+    """Chuẩn hóa và làm sạch chuỗi cho câu lệnh Cypher:
+    - Loại bỏ thẻ <ref> và nội dung tham chiếu
+    - Loại bỏ thẻ HTML (<br>, <span>,...)
+    - Loại bỏ bản mẫu wikitext chưa phân tích ({{...}})
+    - Chuyển cú pháp liên kết [[Đích|Hiển thị]] -> Hiển thị
+    - Xóa bỏ ký tự xuống dòng (\r, \n) để tránh làm vỡ câu lệnh Cypher
+    - Gộp khoảng trắng thừa
+    - Thoát ký tự nháy đơn (') và gạch chéo ngược (\) an toàn
+    """
+    if val is None:
+        return ""
+    text = str(val)
+    # Loại bỏ cặp thẻ <ref>...</ref> và thẻ tự đóng <ref.../>
+    text = re.sub(r"<ref[^>]*>.*?</ref>", " ", text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<ref[^>]*/>", " ", text, flags=re.IGNORECASE)
+    # Loại bỏ thẻ HTML khác
+    text = re.sub(r"<[^>]+>", " ", text)
+    # Loại bỏ các bản mẫu lồng nhau {{...}}
+    while "{{" in text and "}}" in text:
+        text = re.sub(r"\{\{[^{}]*\}\}", " ", text)
+    text = text.replace("{{", "").replace("}}", "")
+    # Rút gọn wikilink [[A|B]] -> B, [[A]] -> A
+    text = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]+)\]\]", r"\1", text)
+    text = text.replace("[[", "").replace("]]", "")
+    # Xóa hoàn toàn \r và \n thành khoảng trắng đơn
+    text = text.replace("\r", " ").replace("\n", " ")
+    text = re.sub(r"\s+", " ", text).strip()
+    # Thoát dấu gạch chéo ngược và nháy đơn cho Cypher single-quoted string
+    text = text.replace("\\", "\\\\").replace("'", "\\'")
+    return text
 
 @dataclass
 class Node:
@@ -127,29 +160,29 @@ class CinemaGraph:
 
         # Tạo Nodes
         for node in self.nodes.values():
-            safe_name = node.name.replace("'", "\\'")
-            safe_id = node.id.replace("'", "\\'")
+            safe_name = sanitize_cypher_prop(node.name)
+            safe_id = sanitize_cypher_prop(node.id)
             if node.label == "Person":
-                roles = node.metadata.get("roles", "").replace("'", "\\'")
+                roles = sanitize_cypher_prop(node.metadata.get("roles", ""))
                 lines.append(f"MERGE (p:Person {{id: '{safe_id}'}}) ON CREATE SET p.name = '{safe_name}', p.roles = '{roles}';")
             elif node.label == "Artwork":
-                art_type = node.metadata.get("type", "").replace("'", "\\'")
-                year = str(node.metadata.get("year", "")).replace("'", "\\'")
+                art_type = sanitize_cypher_prop(node.metadata.get("type", ""))
+                year = sanitize_cypher_prop(str(node.metadata.get("year", "")))
                 lines.append(f"MERGE (a:Artwork {{id: '{safe_id}'}}) ON CREATE SET a.title = '{safe_name}', a.type = '{art_type}', a.year = '{year}';")
             elif node.label == "Organization":
-                org_type = node.metadata.get("type", "").replace("'", "\\'")
+                org_type = sanitize_cypher_prop(node.metadata.get("type", ""))
                 lines.append(f"MERGE (o:Organization {{id: '{safe_id}'}}) ON CREATE SET o.name = '{safe_name}', o.type = '{org_type}';")
 
         lines.append("")
         lines.append("// 3. Tạo các cạnh quan hệ (Relationships)")
         
         for edge in self.edges:
-            s_id = edge.source_id.replace("'", "\\'")
-            t_id = edge.target_id.replace("'", "\\'")
-            evidence = edge.evidence.replace("'", "\\'")
+            s_id = sanitize_cypher_prop(edge.source_id)
+            t_id = sanitize_cypher_prop(edge.target_id)
+            evidence = sanitize_cypher_prop(edge.evidence)
             rel = edge.rel_type
             
-            # Khởi tạo câu truy vấn MATCH và MERGE
+            # Khởi tạo câu truy vấn MATCH và MERGE (đảm bảo strictly 1 dòng duy nhất)
             lines.append(
                 f"MATCH (s {{id: '{s_id}'}}), (t {{id: '{t_id}'}}) "
                 f"MERGE (s)-[r:{rel}]->(t) "
