@@ -36,4 +36,6 @@ scratch_query.py
 # Temporary test artifacts & agents
 test_*.pdf
 reports/test_*.png
+reports/latex_preview/
+tools/
 .agents/

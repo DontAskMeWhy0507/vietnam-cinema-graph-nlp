@@ -809,7 +809,7 @@ class TestTier4RealWorldWorkloads:
         import fitz
         doc = fitz.open(REPORT_PDF)
         assert len(doc) >= 10
-        # Kiểm tra sự hiện diện của biểu đồ và bảng kết luận trên trang 11
-        p11_text = doc[10].get_text()
-        assert "kết luận" in p11_text.lower() or "đánh giá" in p11_text.lower()
-        assert "github" in p11_text.lower()
+        # Kiểm tra sự hiện diện của phần kết luận và link GitHub trên trang kết luận cuối
+        conclusion_text = doc[-1].get_text()
+        assert "kết luận" in conclusion_text.lower() or "đánh giá" in conclusion_text.lower()
+        assert "github" in conclusion_text.lower()
